@@ -1,0 +1,6 @@
+/.idea/
+/build/
+/dist/
+/test/
+/jars/bioformats_package.jar
+__pycache__/
