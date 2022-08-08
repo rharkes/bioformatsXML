@@ -2,5 +2,6 @@
 /build/
 /dist/
 /test/
+/venv/
 /jars/bioformats_package.jar
 __pycache__/

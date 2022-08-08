@@ -8,6 +8,7 @@ import xmlschema
 from jpype.types import *
 import xml.etree.ElementTree as ET
 
+
 class BioformatsXML:
     def __init__(self):
         # Launch the JVM
@@ -28,6 +29,7 @@ class BioformatsXML:
         self.reader = ImageReader()
         self.my_schema = xmlschema.XMLSchema(r'xml_schema/ome.xsd')
         logging.info('Class loaded')
+
     def get_xml(self, inputFile):
         if not Path(inputFile).exists():
             logging.info(f'File {inputFile} not found')
