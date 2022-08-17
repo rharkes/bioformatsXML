@@ -10,6 +10,7 @@ Make sure `bioformatsXML.exe` is available from the command line.
 
 # Build instructions
 * Clone the project
-* Create a virtual environment in /venv/ 
+* Download [bioformats](https://www.openmicroscopy.org/bio-formats/downloads/) and put `bioformats_package.jar` in `jars`
+* Create a virtual environment in `venv` 
 * Install requirements with `pip install -r requirements.txt`
 * Run `pyinstaller bioformatsXML.spec`
