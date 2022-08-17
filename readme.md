@@ -4,9 +4,9 @@ Commandline tool to automatically extract ome-xml data from any bioformats compa
 # Usage
 Make sure `bioformatsXML.exe` is available from the command line.
 * `bioformatsXML -h` display help
-* `bioformatsXML -d C:\Temp` run on all files in `C:\temp`
+* `bioformatsXML -d C:\Temp` run on all files in `C:\Temp`
 * `bioformatsXML -f C:\Temp\mytif.tif` run on one file
-* `bioformatsXML -f C:\Temp\mytif.tif -l 2` run on one file and print every step (usefull for debuggin) 
+* `bioformatsXML -f C:\Temp\mytif.tif -l 2` run on one file and print every step (usefull for debugging) 
 
 # Build instructions
 * Clone the project
