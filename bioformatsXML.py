@@ -40,25 +40,25 @@ def load_files(args: argparse.Namespace) -> None:
     files = [x for x in pth.glob('*') if x.is_file()]
     bfx = BioformatsXML()
     for file in files:
-        xml = bfx.get_xml(file)
-        if xml:
-            out = Path(file.parent, file.stem + '.xml')
-            xml.write(out)
-            logging.info(f'Wrote {out}')
-            if not bfx.verify_schema(out):
-                logging.error(f'Invalid xml: {out}')
-            else:
-                logging.info(f'Validated {out}')
+        _load_file(bfx, file)
 
 
 def load_file(args: argparse.Namespace) -> None:
     file = Path(args.f)
     bfx = BioformatsXML()
+    _load_file(bfx, file)
+
+
+def _load_file(bfx: BioformatsXML, file) -> None:
     xml = bfx.get_xml(file)
     if xml:
         out = Path(file.parent, file.stem + '.xml')
         xml.write(out)
         logging.info(f'Wrote {out}')
+        if not bfx.verify_schema(out):
+            logging.error(f'Invalid xml: {out}')
+        else:
+            logging.info(f'Validated {out}')
 
 
 if __name__ == "__main__":
